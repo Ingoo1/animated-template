@@ -785,56 +785,65 @@
                   <p class="leading-relaxed mt-1 mb-4 text-gray-600">
                     Complete this form and we will get back to you in 24 hours.
                   </p>
-                  <!-- Name -->
-                  <div class="relative w-full mb-3 mt-8">
-                    <label
-                      class="block uppercase text-gray-700 text-xs font-bold mb-2"
-                      for="full-name"
-                    >
-                      Full Name </label
-                    ><input
-                      type="text"
-                      class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                      placeholder="Full Name"
-                      style="transition: all 0.15s ease 0s"
-                    />
-                  </div>
-                  <!-- Email -->
-                  <div class="relative w-full mb-3">
-                    <label
-                      class="block uppercase text-gray-700 text-xs font-bold mb-2"
-                      for="email"
-                    >
-                      Email </label
-                    ><input
-                      type="email"
-                      class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                      placeholder="Email"
-                      style="transition: all 0.15s ease 0s"
-                    />
-                  </div>
-                  <!-- Message -->
-                  <div class="relative w-full mb-3">
-                    <label
-                      class="block uppercase text-gray-700 text-xs font-bold mb-2"
-                      for="message"
-                    >
-                      Message </label
-                    ><textarea
-                      rows="4"
-                      cols="80"
-                      class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                      placeholder="Type a message..."
-                    ></textarea>
-                  </div>
+                  <form action="https://formspree.io/f/xdovlqep" method="POST">
+                    <!-- Name -->
+                    <div class="relative w-full mb-3 mt-8">
+                      <label
+                        class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                        for="full-name"
+                      >
+                        Full Name </label
+                      ><input
+                        type="text"
+                        class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                        placeholder="Full Name"
+                        style="transition: all 0.15s ease 0s"
+                        name="name"
+                        required
+                      />
+                    </div>
+                    <!-- Email -->
+                    <div class="relative w-full mb-3">
+                      <label
+                        class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                        for="email"
+                      >
+                        Email </label
+                      ><input
+                        type="email"
+                        class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                        placeholder="Email"
+                        style="transition: all 0.15s ease 0s"
+                        name="email"
+                        required
+                      />
+                    </div>
+                    <!-- Message -->
+                    <div class="relative w-full mb-3">
+                      <label
+                        class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                        for="message"
+                      >
+                        Message </label
+                      ><textarea
+                        rows="4"
+                        cols="80"
+                        class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                        placeholder="Type a message..."
+                        name="message"
+                        required
+                      ></textarea>
+                    </div>
                   <div class="text-center mt-6">
                     <button
                       class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
+                      
                       style="transition: all 0.15s ease 0s"
+                      type="submit"
                     >
                       Send Message
                     </button>
+                  </form>
                   </div>
                 </div>
               </div>
@@ -1002,23 +1011,9 @@
       </div>
     </footer>
     <!-- End of Footer Section -->
+    <!-- AOS.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/navbar.js"></script>
   </body>
-  <!-- AOS.js -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    // AOS.init();
-    AOS.init({
-      delay: 200, // values from 0 to 3000, with step 50ms
-      duration: 1500, // values from 0 to 3000, with step 50ms
-      once: false, // whether animation should happen only once - while scrolling down
-      mirror: false, // whether elements should animate out while scrolling past them
-    });
-  </script>
-  <!-- Navigation Script -->
-  <script>
-    function toggleNavbar(collapseID) {
-      document.getElementById(collapseID).classList.toggle('hidden');
-      document.getElementById(collapseID).classList.toggle('block');
-    }
-  </script>
 </html>
